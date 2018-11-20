@@ -3,63 +3,73 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
-namespace aula13_11
+namespace aula20_11
 {
     class Program
     {
-        static void Troca(int[] vetor, int posi1, int posi2)
+        static void ExemploCollections()
         {
-            int aux = 0;
-            aux = vetor[posi1];
-            vetor[posi1] = vetor[posi2];
-            vetor[posi2] = aux;
+            Queue fila = new Queue();
+            fila.Enqueue(1);
+            fila.Enqueue(2);
+            fila.Enqueue(3);
+            fila.Enqueue(4);
 
-            Console.WriteLine();
+            Console.WriteLine("A fila possui {0} elementos", fila.Count);
+
+            Stack pilha = new Stack();
+            pilha.Push(1);
+            pilha.Push(2);
+            pilha.Push(3);
+            pilha.Push(4);
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            while (pilha.Count > 0)
+                Console.WriteLine(pilha.Pop());
+            Console.ResetColor();
+
+            int elemento = (int)fila.Dequeue();
+
+             Console.WriteLine("\n");
+
+            Console.WriteLine("O primeiro elemento: " + elemento);
+
+            Console.WriteLine("A fila possui {0} elementos", fila.Count);
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            while (fila.Count > 0)
+                Console.WriteLine(fila.Dequeue());
+            Console.ResetColor();
+
+            Console.WriteLine("\n");
+
+            ArrayList lista = new ArrayList();
+            lista.Add(1);
+            lista.Add(2);
+            lista.Add(3);
+            lista.Add(4);
+
+            Console.WriteLine("A lista possui {0} elementos", lista.Count);
+
+            Console.WriteLine("Existe o elemento 2? {0}", fila.Contains(2));
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            for (int i = 0; i < lista.Count; i++)
+                Console.Write(lista[i] + "\t");
+            Console.ResetColor();
+
+            Console.WriteLine("\n");
+
+            //Queue = Fila
+            //Enqueue = Enfileirar
+            //Dequeue = Desinfileirar
         }
 
-        static void Imprime(int[] vetor)
-        {
-            for (int i = 0; i < vetor.Length; i++)
-                Console.Write(vetor[i] + " ");
-            Console.WriteLine();
-        }
         static void Main(string[] args)
         {
-            int posicao1 = 0;
-            int posicao2 = 0;
-
-            int[] vetor = new int[] { 12, 6, 14, 10, 26 }; // 0 1 2 3 4 respectivamente
-
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.Write("\n\t");
-            Imprime(vetor);
-            Console.ResetColor();
-
-            do
-            {
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.Write("\n\tDigite a 1ª posição: ");
-                posicao1 = Int32.Parse(Console.ReadLine());
-            } while (posicao1 < 0 || posicao1 > vetor.Length);
-
-            do
-            {
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.Write("\n\tDigite a 2ª posição: ");
-                posicao2 = Int32.Parse(Console.ReadLine());
-                Console.ResetColor();
-            } while (posicao2 < 0 || posicao2 > vetor.Length);
-
-            /* || = ou
-             * && = as duas condições ao mesmo tempo */
-
-            Troca(vetor, posicao1, posicao2);
-
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.Write("\t");
-            Imprime(vetor);
-            Console.ResetColor();
+            ExemploCollections();
 
             Console.ReadKey();
         }

@@ -1,0 +1,7 @@
+C:\Users\31816774\Desktop\aula20-11\aula20-11\bin\Debug\aula20-11.exe.config
+C:\Users\31816774\Desktop\aula20-11\aula20-11\bin\Debug\aula20-11.exe
+C:\Users\31816774\Desktop\aula20-11\aula20-11\bin\Debug\aula20-11.pdb
+C:\Users\31816774\Desktop\aula20-11\aula20-11\obj\Debug\aula20-11.csprojAssemblyReference.cache
+C:\Users\31816774\Desktop\aula20-11\aula20-11\obj\Debug\aula20-11.csproj.CoreCompileInputs.cache
+C:\Users\31816774\Desktop\aula20-11\aula20-11\obj\Debug\aula20-11.exe
+C:\Users\31816774\Desktop\aula20-11\aula20-11\obj\Debug\aula20-11.pdb
